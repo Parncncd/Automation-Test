@@ -39,21 +39,34 @@
     <script>
         $(document).ready(function() {
             $("div#error_alert").hide();
+            $("div#error_alert2").hide();
+            $("div#error_alert3").hide();
         });
 
         function signin() {
             isValid = false;
-
+            filled_username = false
+            filled_password = false
             username = $("#txt_username").val();
             password = $("#txt_password").val();
-
+            if (username != "") {
+                filled_username = true
+            } else if (password != "") {
+                filled_password = true
+            }
 
             if (username == "cekmitl" && password == "ecc56789") {
                 isValid = true;
             }
 
             if (!isValid) {
-                $("div#error_alert").show();
+                if (!filled_usernamee) {
+                    $("div#error_alert2").show();
+                } else if (!filled_password) {
+                    $("div#error_alert3").show();
+                } else {
+                    $("div#error_alert").show()
+                }
                 return false;
             } else {
                 $(location).attr("href", "index.html");
@@ -70,6 +83,14 @@
 
         <div id="error_alert" class="alert alert-danger" role="alert">
             Please enter valid username and password!
+        </div>
+
+        <div id="error_alert2" class="alert alert-danger" role="alert">
+            Please enter username!
+        </div>
+
+        <div id="error_alert3" class="alert alert-danger" role="alert">
+            Please enter password!
         </div>
 
         <div>
