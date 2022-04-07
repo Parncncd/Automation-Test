@@ -61,12 +61,13 @@
             }
 
             if (!isValid) {
-                if (!filled_usernamee) {
-                    $("div#error_alert2").show();
+                if ((username != "cekmitl" && password != "ecc56789") || (username == "cekmitl" && password != "ecc56789") || (username != "cekmitl" && password == "ecc56789")) {
+                    $("div#error_alert").show()
+
                 } else if (!filled_password) {
                     $("div#error_alert3").show();
-                } else {
-                    $("div#error_alert").show()
+                } else if (!filled_username) {
+                    $("div#error_alert2").show();
                 }
                 return false;
             } else {
