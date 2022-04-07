@@ -64,14 +64,26 @@
             if (!isValid) {
                 if ((filled_username && filled_password) && ((username != "cekmitl" && password != "ecc56789") || (username == "cekmitl" && password != "ecc56789") || (username != "cekmitl" && password == "ecc56789"))) {
                     $("div#error_alert").show();
+                    $("div#error_alert2").hide();
+                    $("div#error_alert3").hide();
+                    $("div#error_alert4").hide();
 
                 } else if (!filled_password && !filled_username) {
                     $("div#error_alert4").show();
+                    $("div#error_alert").hide();
+                    $("div#error_alert2").hide();
+                    $("div#error_alert3").hide();
 
                 } else if (!filled_password) {
                     $("div#error_alert3").show();
+                    $("div#error_alert").hide();
+                    $("div#error_alert2").hide();
+                    $("div#error_alert4").hide();
                 } else if (!filled_username) {
                     $("div#error_alert2").show();
+                    $("div#error_alert").hide();
+                    $("div#error_alert3").hide();
+                    $("div#error_alert4").hide();
                 }
                 return false;
             } else {
