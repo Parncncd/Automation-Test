@@ -46,15 +46,15 @@
 
         function signin() {
             isValid = false;
-            filled_username = false
-            filled_password = false
+            filled_username = false;
+            filled_password = false;
             username = $("#txt_username").val();
             password = $("#txt_password").val();
             if (username == "cekmitl" || username == "cekmitl_x") {
-                filled_username = true
+                filled_username = true;
             }
             if (password == "ecc56789" || password == "ecc56789_x") {
-                filled_password = true
+                filled_password = true;
             }
 
             if (username == "cekmitl" && password == "ecc56789") {
@@ -69,14 +69,8 @@
                     $("div#error_alert4").show();
 
                 } else if (!filled_password) {
-                    $("div#error_alert").hide();
-                    $("div#error_alert2").hide();
-                    $("div#error_alert4").hide();
                     $("div#error_alert3").show();
                 } else if (!filled_username) {
-                    $("div#error_alert").hide();
-                    $("div#error_alert3").hide();
-                    $("div#error_alert4").hide();
                     $("div#error_alert2").show();
                 }
                 return false;
