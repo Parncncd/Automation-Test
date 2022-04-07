@@ -62,7 +62,7 @@
             }
 
             if (!isValid) {
-                if ((username != "cekmitl" && password != "ecc56789") || (username == "cekmitl" && password != "ecc56789") || (username != "cekmitl" && password == "ecc56789")) {
+                if ((filled_username && filled_password) && ((username != "cekmitl" && password != "ecc56789") || (username == "cekmitl" && password != "ecc56789") || (username != "cekmitl" && password == "ecc56789"))) {
                     $("div#error_alert").show();
 
                 } else if (!filled_password && !filled_username) {
