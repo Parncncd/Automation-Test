@@ -1,6 +1,6 @@
 # Web
 
-go to https://spd-ce.github.io/fortesting/signin.html
+go to  https://chananchida-srithongdee.github.io/Automation-Test/
 
 # Testing
 
