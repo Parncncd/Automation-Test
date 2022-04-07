@@ -12,7 +12,7 @@ ${button_signin}      //*[@id="btn_signin"]
 ${alert_box_error}     //*[@id="error_alert"]
 ${alert_box_error2}     //*[@id="error_alert2"]
 ${alert_box_error3}     //*[@id="error_alert3"]
-
+${alert_box_error4}     //*[@id="error_alert4"]
 
 
 *** Keywords ***
@@ -64,9 +64,8 @@ T0005 Sign-in without both username and password
     [Tags]    failed-case
     Open Browser    ${url_signin}    chrome
     Title Should Be    Sign In
-    Input Text    ${textbox_password}   ecc56789
     Click Element    ${button_signin}
-    Element Should Contain    ${alert_box_error}    Please enter username and password!
+    Element Should Contain    ${alert_box_error4}    Please enter username and password!
 
 
 T0006 Sign-in with valid username and without password

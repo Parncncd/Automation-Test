@@ -62,7 +62,10 @@
 
             if (!isValid) {
                 if ((username != "cekmitl" && password != "ecc56789") || (username == "cekmitl" && password != "ecc56789") || (username != "cekmitl" && password == "ecc56789")) {
-                    $("div#error_alert").show()
+                    $("div#error_alert").show();
+
+                } else if (!filled_password && !filled_username) {
+                    $("div#error_alert4").show();
 
                 } else if (!filled_password) {
                     $("div#error_alert3").show();
@@ -94,6 +97,11 @@
         <div id="error_alert3" class="alert alert-danger" role="alert">
             Please enter password!
         </div>
+
+        <div id="error_alert4" class="alert alert-danger" role="alert">
+            Please enter username and password!
+        </div>
+
 
         <div>
             <label for="txt_username" class="sr-only">Username</label>
